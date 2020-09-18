@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTC-8">
+        <title>Cozinhando</title>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/teste.css">
+    </head>
+
+    <body>
+
+        <main>
+                <form id="formulario">
+                    <div>
+                        <label for="produto">Produto</label>
+                        <input type="text" class="produto" name="produto" placeholder="Produto" id=formu>
+                    </div>
+                    <div>
+                        <label for="preco">Preço da Embalagem (R$)</label>
+                        <input type="text" class="preco" name="preco" placeholder="Preço da Embalagem" id="formu">
+                    </div>
+                    <div>
+                        <label for="pesoEmb">Quantidade na Embalagem</label>
+                        <input type="text" class="pesoEmb" name="pesoEmb" placeholder="Embalagem" id="formu">
+                        <select id="seletor-tipoCaixa">
+                            <option>kg</option>
+                            <option>g</option>
+                            <option>L</option>
+                            <option>mL</option>
+                            <option>Unidades</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="peso">Quantidade Usada</label>
+                        <input type="text" class="peso" name="peso" placeholder="Quantidade Usada na Receita" id="formu">
+                        <select id="seletor-tipoUsado">
+                            <option>kg</option>
+                            <option>g</option>
+                            <option>L</option>
+                            <option>mL</option>
+                            <option>Unidades</option>
+                        </select>
+                    </div>
+                    <div>
+                        <input type="button" value="Enviar" class="botao">
+                    </div>
+                </form> 
+
+                <ul id="mensagens-erro"></ul>
+
+                <table class="invisivel" id="tabela-geral">
+					<thead>
+						<tr style="border: 1px solid green">
+							<th>Produto</th>
+							<th>Peso(kg)</th>
+							<th>Peso da Embalagem (kg)</th>
+							<th>Preço do Produto</th>
+                            <th>Valor Gasto</th>
+                            <th>Excluir</th>
+						</tr>
+					</thead>
+                    <tbody id="tabela-produtos"></tbody>
+                    <tfoot>
+                        <tr>
+                            <td style="padding-left: 2px;">Total</td>
+                            <td></td>
+                            <td></td>
+                            <td style="text-align: right;">R$</td>
+                            <td id="resultado">0</td>
+                            <td></td>
+                        </tr>
+                    </tfoot>
+				</table>
+                
+        </main>
+
+    </body>
+
+    <script src="./js/index.js"></script>
+    <script src="./js/produto.js"></script>
+    <script src="./js/seletor.js"></script>
+    <script src="./js/validacao.js"></script>
+
+</html>
