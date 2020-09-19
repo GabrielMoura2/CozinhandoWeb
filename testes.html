@@ -2,15 +2,32 @@
 <html lang="pt-br">
     <head>
         <meta charset="UTC-8">
-        <title>Cozinhando</title>
+        <title>CozinhandoWeb</title>
         <link rel="stylesheet" href="./css/reset.css">
-        <link rel="stylesheet" href="./css/teste.css">
+        <link rel="stylesheet" href="./css/formulario.css">
+        <link rel="stylesheet" href="./css/general.css">
     </head>
 
     <body>
 
-        <main>
-                <form id="formulario">
+        <header>
+            <div class="caixa">
+                <h1 class="logo"><img src="141883.png"></h1>
+                <h2 class="tituloPrincipal">CozinhandoWeb</h2>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="doces.html">Doces</a></li>
+                        <li><a href="salgados.html">Salgados</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="principal">
+            <h3 id="titulo-h" >Cálculo de Ingredientes</h3>
+
+                <form id="formulario" class="caixinha">
                     <div>
                         <label for="produto">Produto</label>
                         <input type="text" class="produto" name="produto" placeholder="Produto" id=formu>
@@ -46,10 +63,10 @@
                     </div>
                 </form> 
 
-                <ul id="mensagens-erro"></ul>
+                <ul id="mensagens-erro" class="caixinha"></ul>
 
-                <table class="invisivel" id="tabela-geral">
-					<thead>
+                <table class="invisivel caixinha" id="tabela-geral">
+					<thead class="cabecalho">
 						<tr style="border: 1px solid green">
 							<th>Produto</th>
 							<th>Peso(kg)</th>
@@ -60,7 +77,7 @@
 						</tr>
 					</thead>
                     <tbody id="tabela-produtos"></tbody>
-                    <tfoot>
+                    <tfoot class="resultadoContas">
                         <tr>
                             <td style="padding-left: 2px;">Total</td>
                             <td></td>
@@ -71,8 +88,18 @@
                         </tr>
                     </tfoot>
 				</table>
-                
         </main>
+
+        <footer>
+            <div class="caixa">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="doces.html">Doces</a></li>
+                <li><a href="salgados.html">Salgados</a></li>
+            </ul>
+            <p>&copy; Todos os Direitos reservados</p>
+            </div>
+        </footer>
 
     </body>
 
